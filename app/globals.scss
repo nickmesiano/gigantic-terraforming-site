@@ -1,0 +1,12 @@
+@import './styles/mixins.scss';
+
+main {
+    margin: 10px;
+    @include tablet-up {
+        margin: 45px;
+    }
+}
+
+p {
+    margin-bottom: 10px;
+}

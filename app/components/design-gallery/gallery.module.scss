@@ -1,0 +1,60 @@
+@import '../../styles/mixins.scss';
+
+.Gallery__Outer {
+    //flex positioning
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    //appearance
+    list-style-type: none;
+}
+
+.Gallery__Element {
+    //flex positioning
+    flex: 0 0 calc(50%);
+    @include tablet-up {
+        flex: 0 0 calc(25%);
+    }
+    position: relative;
+
+    //appearance
+    padding: 5px;
+    transition: 0.15s padding ease;
+    font-size: 16px;
+
+    &:hover {
+        padding: 0;
+    }
+
+    .background {
+        background: #b20e0e;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+        //positioning
+        position: absolute;
+        text-align: center;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        //appearance
+        color: white;
+        border-radius: 10px;
+        text-shadow: #000 0 0 10px;
+    }
+}
+
+.Gallery__Element:before{
+    //to make flex elements square (height)
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+

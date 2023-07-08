@@ -1,0 +1,17 @@
+@import '../styles/mixins.scss';
+
+.ContentSection {
+    width: 100%;
+    padding: 50px 25px;
+    text-align: center;
+    border-radius: 15px ;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+
+    @include tablet-up {
+        padding: 50px 50px;
+    }
+}
+
+
+
